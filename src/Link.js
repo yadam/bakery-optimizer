@@ -22,6 +22,12 @@ NextComposed.propTypes = {
   prefetch: PropTypes.bool,
 };
 
+NextComposed.defaultProps = {
+  as: undefined,
+  href: undefined,
+  prefetch: undefined,
+};
+
 // A styled version of the Next.js Link component:
 // https://nextjs.org/docs/#with-link
 function Link(props) {
@@ -41,11 +47,24 @@ function Link(props) {
   });
 
   if (naked) {
-    return <NextComposed className={className} ref={innerRef} href={href} {...other} />;
+    return (
+      <NextComposed
+        className={className}
+        ref={innerRef}
+        href={href}
+        {...other}
+      />
+    );
   }
 
   return (
-    <MuiLink component={NextComposed} className={className} ref={innerRef} href={href} {...other} />
+    <MuiLink
+      component={NextComposed}
+      className={className}
+      ref={innerRef}
+      href={href}
+      {...other}
+    />
   );
 }
 
@@ -60,4 +79,17 @@ Link.propTypes = {
   prefetch: PropTypes.bool,
 };
 
-export default React.forwardRef((props, ref) => <Link {...props} innerRef={ref} />);
+Link.defaultProps = {
+  activeClassName: undefined,
+  as: undefined,
+  className: undefined,
+  href: undefined,
+  innerRef: undefined,
+  naked: undefined,
+  onClick: undefined,
+  prefetch: undefined,
+};
+
+export default React.forwardRef((props, ref) => (
+  <Link {...props} innerRef={ref} />
+));
