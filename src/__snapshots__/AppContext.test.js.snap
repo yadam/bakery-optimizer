@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppContextProvider renders with children 1`] = `
+<div>
+  <span>
+    Hello World!
+  </span>
+</div>
+`;
+
+exports[`AppContextProvider renders without children 1`] = `null`;

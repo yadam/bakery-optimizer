@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Result renders with no results 1`] = `
+<div
+  className="MuiBox-root MuiBox-root-3 makeStyles-root-1"
+>
+  <p
+    className="MuiTypography-root makeStyles-list-2 MuiTypography-body1"
+  >
+    Result:
+  </p>
+  No solution exists. You will have to call you customers and get one to compromise
+</div>
+`;
+
+exports[`Result renders with results 1`] = `
+<div
+  className="MuiBox-root MuiBox-root-4 makeStyles-root-1"
+>
+  <p
+    className="MuiTypography-root makeStyles-list-2 MuiTypography-body1"
+  >
+    Result:
+  </p>
+  <div>
+    sourdough: round
+  </div>
+  <div>
+    wheat: round
+  </div>
+  <div>
+    banana: round
+  </div>
+</div>
+`;
